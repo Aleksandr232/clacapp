@@ -53,6 +53,33 @@ export default function MyKeyboard(){
                 break;        
         }
     };
+
+
+    const firstNumberDisplay = () => {
+        if (result !== null) {
+            return <Text style={result < 99999 ? [Styles.screenFirstNumber, {color: myColors.result}] : [Styles.screenFirstNumber, {fontSize: 50, color: myColors.result}]}>{result?.toString()}</Text>; 
+        }
+        if (firstNumber && firstNumber.length < 6) {
+          return <Text style={Styles.screenFirstNumber}>{firstNumber}</Text>;
+        }
+        if (firstNumber === "") {
+          return <Text style={Styles.screenFirstNumber}>{"0"}</Text>;
+        }
+        if (firstNumber.length > 5 && firstNumber.length < 8) {
+          return (
+            <Text style={[Styles.screenFirstNumber, { fontSize: 70 }]}>
+              {firstNumber}
+            </Text>
+          );
+        }
+        if (firstNumber.length > 7) {
+          return (
+            <Text style={[Styles.screenFirstNumber, { fontSize: 50 }]}>
+              {firstNumber}
+            </Text>
+          );
+        }
+      };
     return(
         <View style={Styles.viewBottom}>
         <View
@@ -67,7 +94,7 @@ export default function MyKeyboard(){
             {secondNumber}
             <Text style={{ color: "purple", fontSize: 50, fontWeight: '500' }}>{operation}</Text>
           </Text>
-          {/* {firstNumberDisplay()} */}
+          {firstNumberDisplay()}
         </View>
         <View style={Styles.row}>
           <Button title="C" isGray onPress={clear} />
