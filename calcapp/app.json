@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "clacapp",
-    "slug": "clacapp",
+    "name": "calcapp",
+    "slug": "calcapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
