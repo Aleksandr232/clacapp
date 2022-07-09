@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import { StyleSheet, View, Switch } from 'react-native';
 import { ThemeCotext } from './src/context/ThemeCotext';
+import { myColors } from './src/styles/Colors';
 
 export default function App() {
   const[theme, setTheme]=useState('light')
@@ -19,7 +20,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: myColors.light,
     alignItems: 'center',
     justifyContent: 'center',
   },
