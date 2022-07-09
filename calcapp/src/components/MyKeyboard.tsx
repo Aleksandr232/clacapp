@@ -28,6 +28,31 @@ export default function MyKeyboard(){
         setOperation('');
         setResult(null)
     }
+
+    const getResult=()=>{
+        switch(operation){
+            case "+":
+                clear();
+                setResult(parseInt(secondNumber) + parseInt(firstNumber));
+                break;
+            case "-":
+                clear();
+                setResult(parseInt(secondNumber) - parseInt(firstNumber));
+                break;
+            case "*":
+                clear();
+                setResult(parseInt(secondNumber) * parseInt(firstNumber));  
+                break;
+            case "/":
+                clear();
+                setResult(parseInt(secondNumber) / parseInt(firstNumber)); 
+                break;
+            default:
+                clear();
+                setResult(0);
+                break;        
+        }
+    };
     return(
 
     )
