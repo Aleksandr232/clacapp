@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import { StyleSheet, View, Switch } from 'react-native';
 import { ThemeCotext } from './src/context/ThemeCotext';
 import { myColors } from './src/styles/Colors';
+import MyKeyboard from './src/components/MyKeyboard';
 
 
 export default function App() {
@@ -12,7 +13,9 @@ export default function App() {
           <Switch
             value={theme === 'lighe'}
             onValueChange={()=>setTheme(theme === 'light' ? 'dark' : 'light')}
+            style={styles.swit}
           />
+        <MyKeyboard/>
       </View>
     </ThemeCotext.Provider>
   );
@@ -24,5 +27,9 @@ const styles = StyleSheet.create({
     backgroundColor: myColors.light,
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
+  swit:{
+    bottom:200
+  }
 });
