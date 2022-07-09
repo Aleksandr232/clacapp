@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useContext, useState} from 'react';
 import {TouchableOpacity, Text } from 'react-native';
 import { ThemeCotext } from '../context/ThemeCotext';
 import { Styles } from '../styles/GlobalStyles';
@@ -8,4 +8,8 @@ interface ButtonProps{
     title: string;
     isBlue?: boolean;
     isGray?: boolean;
+}
+
+export default function Button ({title, onPress, isBlue, isGray}: ButtonProps){
+    const theme = useContext(ThemeCotext)
 }
