@@ -3,6 +3,7 @@ import { StyleSheet, View, Switch } from 'react-native';
 import { ThemeCotext } from './src/context/ThemeCotext';
 import { myColors } from './src/styles/Colors';
 
+
 export default function App() {
   const[theme, setTheme]=useState('light')
   return (
