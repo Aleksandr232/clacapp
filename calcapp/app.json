@@ -24,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/calc.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.aleksandrmelnikov.calcapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
